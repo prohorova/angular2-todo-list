@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="add-todo input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Enter new todo" #todo
+                   (keydown.enter)="addTodo(todo.value); todo.value=''">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-primary"
+                            (click)="addTodo(todo.value); todo.value=''">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                </span>
+        </div>
+
+        <div class="panel-group" *ngIf="todos.length">
+            <div class="panel panel-default"
+                 *ngFor="let todo of (todos | sort); let i = index">
+                <div class="panel-heading">
+                    <input type="checkbox" class="todo-checkbox"
+                           (change)="toggle(todo)" [checked]="todo.done">
+                        <span class="todo-content" [class.crossed]="todo.done">
+                            {{todo.content}}
+                        </span>
+                    <div class="pull-right">
+                        <a class="btn btn-primary" href="/todo/{{todo.id}}">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a class="btn btn-danger"
+                           (click)="delete(i)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

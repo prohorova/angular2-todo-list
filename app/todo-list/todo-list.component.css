@@ -1,0 +1,17 @@
+.add-todo {
+    margin-bottom: 20px;
+}
+
+.todo-content {
+    line-height: 28px;
+}
+
+.todo-content.crossed {
+    color: #aaaaaa;
+    text-decoration: line-through;
+}
+
+.todo-checkbox {
+    margin-top: 0;
+    vertical-align: middle;
+}
