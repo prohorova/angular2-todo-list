@@ -8,8 +8,7 @@ import { TodoSortPipe } from './../shared/todo.pipe';
     moduleId: module.id,
     selector: 'todo-app',
     templateUrl: 'todo-list.component.html',
-    styleUrls: ['todo-list.component.css'],
-    pipes: [TodoSortPipe]
+    styleUrls: ['todo-list.component.css']
 })
 
 export class TodoListComponent implements OnInit{

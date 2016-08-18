@@ -5,8 +5,7 @@ import { TodoService } from './shared/todo.service';
 @Component({
     moduleId: module.id,
     selector: 'todo-app',
-    templateUrl: 'todo.component.html',
-    providers: [TodoService]
+    templateUrl: 'todo.component.html'
 })
 
 export class TodoComponent {
