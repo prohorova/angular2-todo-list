@@ -7,7 +7,6 @@ import { TodoService } from './../shared/todo.service';
 
 @Component({
     moduleId: module.id,
-    selector: 'todo-item',
     templateUrl: 'todo-item.component.html'
 })
 export class TodoItemComponent implements OnInit, OnDestroy {

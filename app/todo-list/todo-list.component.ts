@@ -6,7 +6,6 @@ import { TodoSortPipe } from './../shared/todo.pipe';
 
 @Component({
     moduleId: module.id,
-    selector: 'todo-app',
     templateUrl: 'todo-list.component.html',
     styleUrls: ['todo-list.component.css']
 })
